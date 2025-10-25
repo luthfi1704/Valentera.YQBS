@@ -1,0 +1,160 @@
+/* Reset CSS dasar */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; 
+}
+
+/* Kontainer utama */
+.hero-container {
+    position: relative; 
+    width: 100%;
+    max-width: 1400px; 
+    margin: auto;
+    overflow: hidden; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Foto utama */
+.main-photo {
+    width: 100%;
+    height: auto;
+    display: block;
+    opacity: 0.9; 
+}
+
+/* Kontainer Logo */
+.logos {
+    position: absolute;
+    top: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 30px;
+    z-index: 10;
+}
+
+.logo {
+    height: 60px; 
+}
+
+/* Kontainer Teks */
+.text-content {
+    position: absolute;
+    top: 15%; 
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: white;
+    z-index: 10;
+}
+
+.text-content h1 {
+    font-size: 6rem; 
+    margin: 0;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.text-content h2 {
+    font-size: 1.5rem;
+    margin: 0;
+    font-weight: normal;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Foto-foto overlay */
+.overlay-photo {
+    position: absolute;
+    width: 28%; 
+    border: 6px solid white;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    z-index: 5;
+}
+
+.photo-1 {
+    top: 5%;
+    left: 3%;
+    transform: rotate(-10deg);
+}
+
+.photo-2 {
+    top: 8%;
+    right: 3%;
+    transform: rotate(8deg);
+}
+
+.photo-3 {
+    bottom: 8%;
+    left: 5%;
+    transform: rotate(5deg);
+}
+
+.photo-4 {
+    bottom: 10%;
+    right: 5%;
+    transform: rotate(-7deg);
+}
+
+/* Hiasan Bunga */
+.flower-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    z-index: 15; 
+    pointer-events: none; 
+}
+
+/* Tombol "Lebih Lanjut" (Dikembalikan) */
+.cta-button {
+    position: absolute;
+    bottom: 12%;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    background-color: #222; 
+    color: white;
+    border: none;
+    padding: 18px 50px;
+    border-radius: 50px; 
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    z-index: 20; 
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #444;
+    transform: translateX(-50%) scale(1.05); 
+}
+
+/* Penyesuaian untuk Mobile */
+@media (max-width: 768px) {
+    .overlay-photo {
+        display: none;
+    }
+    .text-content h1 {
+        font-size: 3rem;
+    }
+    .text-content h2 {
+        font-size: 1rem;
+    }
+    .logo {
+        height: 35px;
+    }
+    .cta-button {
+        padding: 12px 30px;
+        font-size: 0.9rem;
+        bottom: 10%;
+    }
+    .flower-overlay {
+        width: 100%;
+    }
+}
