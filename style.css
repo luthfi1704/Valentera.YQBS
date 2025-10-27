@@ -136,25 +136,44 @@ body, html {
 }
 
 /* Penyesuaian untuk Mobile */
+/* Penyesuaian untuk Mobile (Layar <= 768px) */
 @media (max-width: 768px) {
+    /* Sembunyikan foto overlay */
     .overlay-photo {
         display: none;
     }
-    .text-content h1 {
-        font-size: 3rem;
-    }
-    .text-content h2 {
-        font-size: 1rem;
+
+    /* Kecilkan dan naikkan sedikit posisi logo */
+    .logos {
+        gap: 15px; /* Kurangi jarak antar logo */
+        top: 2%;   /* Naikkan sedikit */
     }
     .logo {
-        height: 35px;
+        height: 35px; /* Ukuran logo lebih kecil */
     }
+
+    /* Kecilkan font dan naikkan sedikit posisi teks */
+    .text-content {
+        top: 12%; /* Naikkan sedikit */
+    }
+    .text-content h1 {
+        font-size: 3rem; /* Judul utama lebih kecil */
+        /* Optional: kurangi spasi huruf jika perlu */
+        /* letter-spacing: -1px; */
+    }
+    .text-content h2 {
+        font-size: 1rem; /* Subjudul lebih kecil */
+    }
+
+    /* Kecilkan tombol dan naikkan sedikit posisinya */
     .cta-button {
-        padding: 12px 30px;
-        font-size: 0.9rem;
-        bottom: 10%;
+        padding: 10px 25px; /* Ukuran tombol lebih kecil */
+        font-size: 0.85rem;
+        bottom: 8%; /* Naikkan sedikit dari bawah */
     }
-    .flower-overlay {
+
+
+}
         width: 100%;
     }
 }
